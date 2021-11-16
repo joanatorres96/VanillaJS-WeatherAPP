@@ -26,11 +26,18 @@ currentTime();
 function showInfo(response) {
   let temp = Math.round(response.data.main.temp);
   let name = response.data.name;
+  let humidityInfo = response.data.main.humidity;
+  let windInfo = (response.data.wind.speed);
+  let icon= 
   let place = document.querySelector("#city");
   let temperature = document.querySelector("#temperature");
+  let humidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#wind-speed");
 
   place.innerHTML = `${name}, `;
   temperature.innerHTML = `${temp}°`;
+  humidity.innerHTML = `Humidity: ${humidityInfo}`;
+  windSpeed.innerHTML = `Wind Speed: ${windInfo}km/h`;
 }
 
 function searchCity(event) {
