@@ -27,8 +27,7 @@ function showInfo(response) {
   let temp = Math.round(response.data.main.temp);
   let name = response.data.name;
   let humidityInfo = response.data.main.humidity;
-  let windInfo = (response.data.wind.speed);
-  let icon= 
+  let windInfo = response.data.wind.speed;
   let place = document.querySelector("#city");
   let temperature = document.querySelector("#temperature");
   let humidity = document.querySelector("#humidity");
