@@ -1,0 +1,46 @@
+#index-body {
+  max-width: 50%;
+  border: 1px solid black;
+  margin: 20px auto;
+  display: block;
+}
+#search-form {
+  margin: 20px auto;
+  max-width: 95%;
+}
+#city-input {
+  color: black;
+}
+#search-button {
+  color: black;
+}
+#current-button {
+  color: black;
+}
+#main-container {
+  color: black;
+}
+#city {
+  color: black;
+}
+#day-hour {
+  color: black;
+}
+#weather-state {
+  color: black;
+}
+#weather-icon {
+  color: black;
+}
+#temperature {
+  color: black;
+}
+.link {
+  color: black;
+}
+.other-info {
+  color: black;
+}
+.footer {
+  color: black;
+}

@@ -24,19 +24,31 @@ function currentTime() {
 currentTime();
 //
 function showInfo(response) {
-  let temp = Math.round(response.data.main.temp);
+  console.log(response.data);
   let name = response.data.name;
   let humidityInfo = response.data.main.humidity;
   let windInfo = response.data.wind.speed;
+  let weatherInfo = response.data.weather[0].description;
+  let feelsLikeInfo = response.data.main.feels_like;
   let place = document.querySelector("#city");
   let temperature = document.querySelector("#temperature");
+  let feelsLike = document.querySelector("#feels-like");
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
-
+  let weatherIcon = document.querySelector("#weather-icon");
+  let weatherState = document.querySelector("#weather-state");
+  celsiusTemp = response.data.main.temp;
   place.innerHTML = `${name}, `;
-  temperature.innerHTML = `${temp}°`;
-  humidity.innerHTML = `Humidity: ${humidityInfo}`;
+  weatherState.innerHTML = weatherInfo;
+  temperature.innerHTML = `${Math.round(celsiusTemp)}°`;
+  feelsLike.innerHTML = `Feels Like: ${Math.round(feelsLikeInfo)}º`;
+  humidity.innerHTML = `Humidity: ${humidityInfo}%`;
   windSpeed.innerHTML = `Wind Speed: ${windInfo}km/h`;
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(event) {
@@ -68,7 +80,26 @@ function getLocation(position) {
   axios.get(`${apiUrl}`).then(showInfo);
 }
 
-let locationButton = document.querySelector("#current");
+let locationButton = document.querySelector("#current-button");
 locationButton.addEventListener("click", currentLocation);
 
 getCityInfo("Lisbon");
+
+let celsiusTemp = null;
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#temperature");
+  temp.innerHTML = Math.round(celsiusTemp) + "º";
+}
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showCelsius);
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  let temp = document.querySelector("#temperature");
+  temp.innerHTML = Math.round(fahrenheitTemp) + "º";
+}
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheit);

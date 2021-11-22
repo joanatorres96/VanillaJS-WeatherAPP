@@ -10,39 +10,42 @@
     <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="index-body">
  <div class="container" id="search-form">
    <form id="city-form">
               <input type="text" id="city-input" placeholder="Enter city name">
-              <input type="submit" value="Search">
-              <button id="current">Current location</button>
+              <input type="submit" id="search-button" value="Search">
+              <button id="current-button">Current location</button>
             </form>
   
 </div>
 
-<div class="container" >
+<div class="container" id="main-container" >
  <div class="row">
     <div class="col">
-      <span id="day-hour"></span>  
-      </br>
       <span id="city"></span>
       </br>
-      <span id="temperature"></span>
+      <span id="day-hour"></span>  
+      </br>
+      <span id="weather-state"></span>
+      
+      
+    </div>
+
+    <div class="col">
+     <img src="#" alt="" id="weather-icon">
+     <span id="temperature"></span>
       <a href="#" class="link" id="celsius"> C</a>|<a href="#" class="link" id="fahrenheit"> F</a>
     </div>
-
-    <div class="col">Column
-     <p id="weather-icon"></p>
-    </div>
-
-     <div class="col">Column
-     <span id="humidity"></span>
-     </br>
-     <span id="wind-speed"></span>
+</div>
+     <div>
+     <span class="other-info" id="feels-like"></span>
+     <span class="other-info" id="humidity"></span>
+     <span class="other-info" id="wind-speed"></span>
      </div>
    </div>
-  </div>
-  <div class="container">
+  
+  <div class="footer">
       <a href="#">Open-source code</a> by Joana Torres
   </div>
 </div>
