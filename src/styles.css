@@ -1,46 +1,112 @@
+body {
+  background: linear-gradient(
+    to right,
+    rgb(101, 255, 253) 0%,
+    rgb(36, 153, 238) 90%
+  );
+}
 #index-body {
-  max-width: 50%;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 25px;
+  max-width: 80%;
   border: 1px solid black;
   margin: 20px auto;
   display: block;
+  border-radius: 10px;
+  background-color: #ffffff7e;
+  border-color: #ffffff10;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 #search-form {
   margin: 20px auto;
   max-width: 95%;
 }
 #city-input {
+  margin-left: 25px;
+  width: 60%;
   color: black;
+  border-radius: 5px;
+  border-color: rgba(255, 255, 255, 0.356);
+  padding: 5px;
+  box-shadow: -3px 8px 20px rgba(0, 0, 0, 0.2);
 }
 #search-button {
-  color: black;
+  color: white;
+  text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4);
+  background: #f3a333;
+  border-color: #f3a333;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: -3px 8px 20px rgba(0, 0, 0, 0.2);
 }
 #current-button {
-  color: black;
+  color: white;
+  text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4);
+  background: #f3a333;
+  border-color: #f3a333;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: -3px 8px 20px rgba(0, 0, 0, 0.2);
 }
 #main-container {
-  color: black;
+  margin: 3%;
+  max-width: 90%;
+}
+#left-info {
+  padding: 10px 40px 0px 0px;
 }
 #city {
   color: black;
+  font-size: 40px;
+  font-weight: bold;
 }
 #day-hour {
   color: black;
 }
 #weather-state {
   color: black;
+  text-transform: capitalize;
+}
+#icon {
+  padding: 0px;
+  width: 100px;
+  text-align: center;
+  padding: 40px 40px 0px 0px;
 }
 #weather-icon {
-  color: black;
+  width: 100px;
+}
+#temperature-info {
+  padding: 0;
+  position: relative;
+  top: 40px;
 }
 #temperature {
   color: black;
+  font-size: 70px;
 }
-.link {
+#units {
   color: black;
+  position: relative;
+  top: -20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
 }
 .other-info {
-  color: black;
+  padding: 40px 40px 0px 0px;
 }
 .footer {
-  color: black;
+  text-align: center;
+  margin: 30px 0px 10px 0px;
+  font-family: monospace;
+}
+.link {
+  text-decoration: none;
+  color: #48484a;
+}
+.link:hover {
+  color: #f3a333;
 }

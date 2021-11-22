@@ -40,7 +40,7 @@ function showInfo(response) {
   celsiusTemp = response.data.main.temp;
   place.innerHTML = `${name}, `;
   weatherState.innerHTML = weatherInfo;
-  temperature.innerHTML = `${Math.round(celsiusTemp)}°`;
+  temperature.innerHTML = `${Math.round(celsiusTemp)}º`;
   feelsLike.innerHTML = `Feels Like: ${Math.round(feelsLikeInfo)}º`;
   humidity.innerHTML = `Humidity: ${humidityInfo}%`;
   windSpeed.innerHTML = `Wind Speed: ${windInfo}km/h`;
