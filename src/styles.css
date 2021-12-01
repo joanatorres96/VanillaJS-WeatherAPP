@@ -110,3 +110,17 @@ body {
 .link:hover {
   color: #ff260080;
 }
+.five-days-forecast {
+  margin: 50px 0px;
+}
+#forecast {
+  font-size: 25px;
+  text-align: center;
+}
+.forecast-temp-max {
+  font-size: 20px;
+}
+.forecast-temp-min {
+  font-size: 20px;
+  color: #626263;
+}
