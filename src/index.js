@@ -39,7 +39,7 @@ function showInfo(response) {
   let weatherIcon = document.querySelector("#weather-icon");
   let weatherState = document.querySelector("#weather-state");
   celsiusTemp = response.data.main.temp;
-  place.innerHTML = `${name}, `;
+  place.innerHTML = `${name}`;
   weatherState.innerHTML = weatherInfo;
   temperature.innerHTML = `${Math.round(celsiusTemp)}º`;
   feelsLike.innerHTML = `Feels Like: ${Math.round(feelsLikeInfo)}º`;
